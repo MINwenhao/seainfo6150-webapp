@@ -10,6 +10,12 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       // put data fetching code here!
+      const response = await fetch(
+        "http://demo1390455.mockable.io/articles"
+      );
+      const responseJson = await response.json();
+      setFetchedData(responseJson);
+
     };
 
     if (isEmpty(fetchedData)) {
@@ -22,6 +28,7 @@ function App() {
       <Switch>
         <Route>
           <DynamicArticle article={Object.values(fetchedData)[1]} />
+          
         </Route>
       </Switch>
     </div>
