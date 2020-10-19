@@ -1,30 +1,14 @@
 import React, { useEffect, useState } from "react";
+import ArticleListItem from "../ArticleListItem/ArticleListItem";
 
-const ArticleList = () => {
-  const [fetchedData, setFetchedData] = useState([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      // performs a GET request
-      const response = await fetch(
-        "http://demo1390455.mockable.io/articles"
-      );
-      const responseJson = await response.json();
-      setFetchedData(responseJson.data);
-    };
-
-    if (!fetchedData.length) {
-      fetchData();
-    }
-  }, [fetchedData]);
-
+const ArticleList = (Articles) => {
   let displayContent;
 
-  if (fetchedData.length) {
+  if (Object.values(Articles)[0]) {
     displayContent = (
       <ul>
-        {fetchedData.map((item) => (
-          <li key={item.id}>{item.text}</li>
+        {Object.values(Articles)[0].map((article) => (
+          <li key={article.slug}>{ArticleListItem(article)}</li>
         ))}
       </ul>
     );
@@ -35,7 +19,7 @@ const ArticleList = () => {
   return (
     <section>
       <header>
-        <h2>Data fetching</h2>
+        
       </header>
       {displayContent}
     </section>
