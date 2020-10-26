@@ -1,0 +1,11 @@
+.container {
+    background:linear-gradient(to right, rgb(141, 77, 77) , rgb(230, 230, 223),rgb(230, 230, 223),rgb(230, 230, 223),rgb(230, 230, 223),rgb(230, 230, 223));
+    border-radius: 10px;
+    
+}
+.heading{
+    color:red;
+}
+.font{
+    font-weight: bold;
+}
