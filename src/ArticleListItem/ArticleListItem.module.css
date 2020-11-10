@@ -1,5 +1,5 @@
 .container {
-    background-image: linear-gradient(to right, red 25%,yellow 25% 50%,blue 50% 75%, green 75%) ;
+    background-image:linear-gradient(to right,red 25%,yellow 25% 50%,blue 50% 75%,green 75%);
     border: 1px solid #c00;
     border-radius: 10px;
     box-shadow: 0 5px 10px 5px rgba(0, 0, 0, .3);
@@ -39,4 +39,5 @@
     
     
 }
+
 
